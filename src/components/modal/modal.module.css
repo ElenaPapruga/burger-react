@@ -1,0 +1,106 @@
+/* Блок modal */
+.body {
+  position: absolute;
+  padding: 40px;
+  background-color: #1c1c21;
+  max-width: 720px;
+  height: 539px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 40px;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+.button {
+  position: absolute;
+  top: 49px;
+  right: 40px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  transition: 0.2s ease-in-out;
+}
+.button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+/* .active-modal {
+  overflow-y: hidden;
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  background-color: #1c1c21;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  box-sizing: border-box;
+  box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 40px;
+  border: 1px #4c4cff;
+}
+
+.popupСlose {
+  border: 5px yellow;
+  position: absolute;
+  top: 60px;
+  right: 40px;
+  width: 24px;
+  height: 24px;
+}
+
+/* Закрытие Блока modal по overlay */
+/* .overlay {
+  border: 5px red;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.body {
+  border: 5px blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #1c1c21;
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 40px;
+}
+.button {
+  border: 10px blue;
+  display: flex;
+  margin-top: 49px;
+  margin-right: 40px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  transition: 0.2s ease-in-out;
+}
+.button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}  */
