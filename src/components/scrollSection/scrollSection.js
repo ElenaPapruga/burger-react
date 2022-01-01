@@ -1,3 +1,4 @@
+//Для блока IngredientDetails
 import stylesScroll from './scrollSection.module.css'
 import '@ya.praktikum/react-developer-burger-ui-components';
 

@@ -8,10 +8,10 @@ function AppHeaderMenuItem({ text, children }) {
   return (
     <>
       <a href="/" className={stylesHader.unit}>
-        <span className="text text_type_main-small">
+        <span className={`${stylesHader.icon2} pr-2`}>
           {children}
         </span>
-        <p className="text text_type_main-default pl-2 pr-5 pb-4 pt-4">{text}</p>
+        <p className="text text_type_main-default pr-2 pb-4 pt-4">{text}</p>
       </a>
     </>
   );

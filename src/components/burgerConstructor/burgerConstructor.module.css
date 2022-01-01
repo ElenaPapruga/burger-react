@@ -1,5 +1,6 @@
-/* 2-1(2) Блок Конструктор */
+/* 2-1(2) Блок burgerConstructor  */
 .constructor {
+    /* border: 1px solid blue; */
     display: flex;
     justify-self: start;
     max-width: 600px;
@@ -10,21 +11,19 @@
 }
 .list {
     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
     list-style-type: none;
     padding: 0;
 }
-.content {
-    overflow-y: scroll;
-    padding-right: 8px;
-    max-height: 475px;
-}
+
 .check {
     display: flex;
     align-items: center;
 }
 
-/* 2-2(2) Блок Конструктор-Элемент */
+/* 2-2(2) Блок Конструктор-Элемент для burgerConstructor */
 .card {
     display: flex;
     align-items: center;
@@ -32,13 +31,19 @@
     justify-content: flex-end;
 }
 
-/* полоса прокрутки (скроллбар) */
+.element {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* полоса прокрутки (скроллбар) для burgerConstructor */
 ::-webkit-scrollbar {
     width: 8px; /* ширина для вертикального скролла */
     background-color: #2f2f37;
 }
 
-/* ползунок скроллбара */
+/* ползунок скроллбара для burgerConstructor */
 ::-webkit-scrollbar-thumb {
     background-color: #2f2f37;
     border-radius: 1em;
