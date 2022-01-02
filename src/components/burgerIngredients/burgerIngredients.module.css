@@ -1,8 +1,11 @@
 /* 3 - 1(3) Блок burgerIngredients */
+/* border: 5px solid blueviolet; */
+
 .ingridients {
     max-width: 600px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
 }
 
 .title {
@@ -71,13 +74,13 @@
     text-align: center;
 }
 
-/* полоса прокрутки (скроллбар) */
+/* полоса прокрутки (скроллбар) для BurgerIngredients */
 ::-webkit-scrollbar {
     width: 8px; /* ширина для вертикального скролла */
     background-color: #2f2f37;
 }
 
-/* ползунок скроллбара */
+/* ползунок скроллбара для BurgerIngredients */
 ::-webkit-scrollbar-thumb {
     background-color: #2f2f37;
     border-radius: 1em;
