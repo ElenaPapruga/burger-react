@@ -2,6 +2,7 @@
 .scrollSection {
   max-height: calc(100vh - 168px);
   max-width: 600px;
+  overflow-x: hidden;
   height: 100vh;
   overflow: scroll;
   position: relative;

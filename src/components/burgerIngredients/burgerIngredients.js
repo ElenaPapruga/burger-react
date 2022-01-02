@@ -9,6 +9,7 @@ import {
     Tab,
 } from '@ya.praktikum/react-developer-burger-ui-components';
 import PropTypes from 'prop-types';
+import { BurgerPropTypes } from '../../utils/prop-types';
 
 
 function BurgerIngredients(props) {
@@ -108,8 +109,8 @@ function BurgerIngredients(props) {
 }
 // Проверка типов данных компонентов
 BurgerIngredients.propTypes = {
-    data: PropTypes.any,
-};
+    data: PropTypes.arrayOf(BurgerPropTypes)
+}
 
 export default BurgerIngredients
 
