@@ -1,21 +1,20 @@
 // 3 - 1(3) Блок burgerIngredients
-// import React from 'react';
 import stylesIngredient from './burgerIngredients.module.css';
-import { BurgerPropTypes } from '../../utils/prop-types';
-import PropTypes from 'prop-types';
 import '@ya.praktikum/react-developer-burger-ui-components';
 import ScrollSection from '../scrollSection/scrollSection'
-import Portal from '../portal/portal.js'
 import BurgerIngredientItem from './burgerIngredientItem';
 import Card from './burgerIngredientMenu'
 import { useRef, useState } from 'react'
 import {
     Tab,
 } from '@ya.praktikum/react-developer-burger-ui-components';
+import PropTypes from 'prop-types';
+import { BurgerPropTypes } from '../../utils/prop-types';
+
 
 function BurgerIngredients(props) {
     const titledSection1 = useRef(null);
-    const titledSection2 = useRef(null);
+    const titledSection2 = useRef(null)
     const titledSection3 = useRef(null);
 
     const bun = props.data.filter(item => item.type === 'bun');
@@ -30,8 +29,7 @@ function BurgerIngredients(props) {
 
     return (
         <section className={`${stylesIngredient.ingridients} mr-15`}>
-            <h1 style={{ paddingLeft: '0' }} className={`${stylesIngredient.titul} text text_type_main-large ml-0 pl-0 pt-10 pb-5`}>Соберите бургер</h1>
-
+            <h1 className={`${stylesIngredient.titul} text text_type_main-large ml-0 pl-0 pt-10 pb-5`}>Соберите бургер</h1>
             <div className={stylesIngredient.wrapper}>
                 <Tab value="bun" active={current === "bun"} onClick={value => {
                     onTabClick(value, titledSection1)
@@ -52,8 +50,8 @@ function BurgerIngredients(props) {
 
             <ScrollSection
                 onScroll={
-                    evt => {
-                        const container = evt.target
+                    event => {
+                        const container = event.target
                         const scrollPosition = container.scrollTop
                         const positionOfSection2 = titledSection2.current.offsetTop
                         const positionOfSection3 = titledSection3.current.offsetTop
@@ -105,16 +103,13 @@ function BurgerIngredients(props) {
                         </ul>
                     </div>
                 </BurgerIngredientItem>
-
             </ScrollSection>
         </section >
-
     )
 }
-
 // Проверка типов данных компонентов
 BurgerIngredients.propTypes = {
-    data: PropTypes.arrayOf(BurgerPropTypes),
+    data: PropTypes.arrayOf(BurgerPropTypes)
 }
 
 export default BurgerIngredients
