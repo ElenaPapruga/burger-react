@@ -8,37 +8,34 @@ import {
 import ModalOverlay from '../modal/modalOverlay';
 import stylesModal from './modal.module.css';
 
-const Modal = memo(({ children, closePopup }) => {
+const Modal = memo(({ children, closePopup, openPopup }) => {
     useEffect(() => {
-        document.addEventListener('keydown', function (event) {
+        const closeByEscape = (event) => {
             if (event.code === "Escape") {
-                closePopup();
+                closePopup(event);
             }
-        })
+        };
+        window.addEventListener("keydown", closeByEscape);
+
+        return () => {
+            window.removeEventListener("keydown", closeByEscape);
+        };
     }, [closePopup]);
 
-    useEffect(() => {
-        document.addEventListener('keydown', closePopup);
-
-        return (() => {
-            document.removeEventListener('keydown', closePopup);
-        })
-    }, [closePopup])
 
     const onClose = (event) => {
-        closePopup();
+        closePopup(event);
     }
+
     return (
         <div>
-            <div onClick={onClose}>
-                <ModalOverlay />
-            </div>
             <div className={stylesModal.body} onClick={(event) => { event.stopPropagation() }}>
                 <button className={stylesModal.button} onClick={onClose}>
                     <CloseIcon type="primary" />
                 </button>
                 {children}
             </div>
+            <ModalOverlay onClose={onClose} />
         </div>
     );
 })
