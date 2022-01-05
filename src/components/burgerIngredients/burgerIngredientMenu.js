@@ -2,7 +2,6 @@
 import stylesIngredient from './burgerIngredients.module.css';
 import '@ya.praktikum/react-developer-burger-ui-components';
 import PropTypes from 'prop-types';
-import { BurgerPropTypes } from '../../utils/prop-types';
 import {
     Counter,
     CurrencyIcon,
@@ -23,7 +22,13 @@ const Card = ({ item, openPopup }) => {
 
 // Проверка типов данных компонентов
 Card.propTypes = {
-    ingredients: PropTypes.arrayOf(BurgerPropTypes).isRequired
+    item: PropTypes.shape({
+        price: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+    }),
+    openPopup: PropTypes.func.isRequired,
 }
+
 
 export default Card

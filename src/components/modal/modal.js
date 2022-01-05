@@ -5,9 +5,8 @@ import PropTypes from 'prop-types';
 import {
     CloseIcon
 } from '@ya.praktikum/react-developer-burger-ui-components';
-import Overlay from '../modal/overlay';
+import ModalOverlay from '../modal/modalOverlay';
 import stylesModal from './modal.module.css';
-// import { useState } from 'react'
 
 const Modal = memo(({ children, closePopup }) => {
     useEffect(() => {
@@ -18,13 +17,21 @@ const Modal = memo(({ children, closePopup }) => {
         })
     }, [closePopup]);
 
+    useEffect(() => {
+        document.addEventListener('keydown', closePopup);
+
+        return (() => {
+            document.removeEventListener('keydown', closePopup);
+        })
+    }, [closePopup])
+
     const onClose = (event) => {
         closePopup();
     }
     return (
         <div>
             <div onClick={onClose}>
-                <Overlay />
+                <ModalOverlay />
             </div>
             <div className={stylesModal.body} onClick={(event) => { event.stopPropagation() }}>
                 <button className={stylesModal.button} onClick={onClose}>

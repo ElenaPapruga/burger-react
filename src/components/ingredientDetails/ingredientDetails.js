@@ -34,12 +34,10 @@ function IngredientDetails({ detailsIngredient }) {
   );
 }
 
+// Проверка типов данных компонентов
+// Добавим `isRequired`, чтобы показывать предупреждение, если проп не передан
 IngredientDetails.propTypes = {
-  image: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  calories: PropTypes.number.isRequired,
-  proteins: PropTypes.number.isRequired,
-  fat: PropTypes.number.isRequired,
-  carbohydrates: PropTypes.number.isRequired,
+  detailsIngredient: PropTypes.object
 }
+
 export default IngredientDetails;
