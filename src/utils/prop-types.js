@@ -13,6 +13,7 @@ const BurgerPropTypes = PropTypes.shape({
     image: PropTypes.string.isRequired,
     image_mobile: PropTypes.string.isRequired,
     image_large: PropTypes.string.isRequired,
-    });
+    //есть еще один тип данных "__v":0
+});
 
 export { BurgerPropTypes };

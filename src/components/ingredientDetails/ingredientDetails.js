@@ -1,5 +1,5 @@
 // Для блока BurgerIngredient (попап)
-import React from 'react';
+// import React from 'react';
 import stylesIngredient from '../ingredientDetails/ingredientDetails.module.css';
 import PropTypes from 'prop-types';
 
