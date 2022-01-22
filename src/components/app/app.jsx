@@ -5,9 +5,9 @@ import BurgerIngredients from '../burgerIngredients/burgerIngredients';
 import Modal from '../modal/modal';
 import IngredientDetails from '../ingredientDetails/ingredientDetails';
 import OrderDetails from '../orderDetails/orderDetails';
-import { useState, useEffect,useContext } from 'react';
+import { useState, useEffect } from 'react';
 import { IngredientsContext } from '../services/ingredientsContext';
-const API_URL = 'https://norma.nomoreparties.space/api/ingredients'
+import { API_URL} from '../../utils/api';
 
 function App() {
   const [isOrderPopupOpen, setIsOrderPopupOpen] = useState(false);
@@ -23,19 +23,19 @@ function App() {
 
   const getIngredients = async () => {
     try {
-      const res = await fetch(API_URL)
-      if (!res.ok) {
-        throw new Error('Ошибка ответа сети');
+      const res = await fetch(`${API_URL}/ingredients`);
+      if (res.status === 200) {
+        const data = await res.json();
+        setIngredients(data.data);
+        setIsLoading(true)
+      } else {
+        throw new Error('Ошибка ответа ');
       }
-      const data = await res.json();
-      setIngredients(data.data);
-      setIsLoading(true)
     }
-    catch (err) {
+    catch(err) {
       console.log(err)
     }
   }
-
   const togglePopupClose = () => {
     setIsOrderPopupOpen(false);
     setIsIngredientPopupOpen(false);

@@ -12,12 +12,32 @@ import { IngredientsContext } from '../services/ingredientsContext';
 
 
 function BurgerConstructor({ openPopup }) {
-
+  // type ingredients = {
+  //   _id: string,
+  //   name: string,
+  //   type: string,
+  //   proteins: number,
+  //   fat: number,
+  //   carbohydrates: number,
+  //   calories: number,
+  //   price: number,
+  //   image: string,
+  // }
 
   return <IngredientsContext.Consumer>
     {ingredients => {
-      const sum = 4142;
+      //Стоимость составного бургера (2 булки + начинки)
       const bun = ingredients.find(item => item.type === 'bun');
+      const bunPrice = bun ? (bun.price * 2) : 0;
+      
+      const sauce = ingredients.find(item => item.type === 'sauce');
+      const saucePrice = bun ? (sauce.price) : 0;
+
+      const main = ingredients.find(item => item.type === 'main');
+      const mainPrice = main ? (main.price) : 0;
+      
+      const sum = bunPrice + saucePrice + mainPrice;
+      
       return (
         <section className={stylesConstructor.constructor}>
           <ConstructorItem className={`${stylesConstructor.itemPosition} pb-4`} position="top" data={bun}></ConstructorItem>

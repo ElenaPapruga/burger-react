@@ -8,7 +8,7 @@ import {
 import ModalOverlay from '../modal/modalOverlay';
 import stylesModal from './modal.module.css';
 
-const Modal = memo(({ children, closePopup, openPopup }) => {
+const Modal = memo(({ children, closePopup}) => {
     useEffect(() => {
         const closeByEscape = (event) => {
             if (event.code === "Escape") {

@@ -8,11 +8,9 @@ import {
 } from '@ya.praktikum/react-developer-burger-ui-components';
 
 const Card = ({ item, openPopup }) => {
-  const handleOpenModal = () => {
-    openPopup(item);
-  }
+
     return (
-        <div className={`${stylesIngredient.item} ml-4 mb-10`} onClick={handleOpenModal}>
+        <div className={`${stylesIngredient.item} ml-4 mb-10`} onClick={() => openPopup(item)}>
             <Counter count={7} />
             <picture className={`${stylesIngredient.picture} ml-4 mr-4`}>
                 <img className={stylesIngredient.image} src={item.image} alt={item.name} />
@@ -30,7 +28,7 @@ Card.propTypes = {
         name: PropTypes.string.isRequired,
         image: PropTypes.string.isRequired,
     }),
-    handleOpenModal: PropTypes.func.isRequired,
+    openPopup: PropTypes.func.isRequired,
 }
 
 

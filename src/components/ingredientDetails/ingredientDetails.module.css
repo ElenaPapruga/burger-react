@@ -8,8 +8,7 @@
 
 .title {
   display: flex;
-  align-items: center;
-  font-family: "JetBrains Mono", "Ariel", "JetBrains Mono";
+  align-items: center;  
   font-style: normal;
   font-weight: bold;
   font-size: 36px;

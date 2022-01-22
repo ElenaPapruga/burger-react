@@ -14,19 +14,19 @@ function IngredientDetails({ detailsIngredient }) {
         <ul className={stylesIngredient.content}>
           <li className={stylesIngredient.contentBlock}>
             <p className={`${stylesIngredient.text} mb-2 text text_type_digits-default`}>Калории, ккал</p>
-            <span className={`${stylesIngredient.textInfo} mb-0`}>{detailsIngredient.calories}</span>
+            <span className={`${stylesIngredient.textInfo} mb-0 text text_type_digits-medium`}>{detailsIngredient.calories}</span>
           </li>
           <li className={stylesIngredient.contentBlock}>
             <p className={`${stylesIngredient.text} mb-2 text text_type_main-default`}>Белки, г</p>
-            <span className={`${stylesIngredient.textInfo} mb-0`}>{detailsIngredient.proteins}</span>
+            <span className={`${stylesIngredient.textInfo} mb-0 text text_type_digits-medium`}>{detailsIngredient.proteins}</span>
           </li>
           <li className={stylesIngredient.contentBlock}>
             <p className={`${stylesIngredient.text} mb-2 text text_type_main-default`}>Жиры, г</p>
-            <span className={`${stylesIngredient.textInfo} mb-0`}>{detailsIngredient.fat}</span>
+            <span className={`${stylesIngredient.textInfo} mb-0 text text_type_digits-medium`}>{detailsIngredient.fat}</span>
           </li>
           <li className={stylesIngredient.contentBlock}>
             <p className={`${stylesIngredient.text} mb-2 text text_type_main-default`}>Углеводы, г</p>
-            <span className={`${stylesIngredient.textInfo} mb-0`}>{detailsIngredient.carbohydrates}</span>
+            <span className={`${stylesIngredient.textInfo} mb-0 text text_type_digits-medium`}>{detailsIngredient.carbohydrates}</span>
           </li>
         </ul>
       </div>
