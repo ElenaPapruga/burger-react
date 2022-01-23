@@ -1,0 +1,45 @@
+/* Блок App (контейнеры) */
+.root {
+  /* border: 1px solid blue; */
+  max-width: 1920px;
+  min-height: 890px;
+  margin: 0 auto;
+}
+
+.conteiner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1920px;
+
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1280px) {
+  .conteiner {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-height: 1024px) {
+  .conteiner {
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 764px) {
+  .conteiner {
+    padding: 30px;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 1200px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .conteiner {
+    padding: 10px;
+  }
+}
